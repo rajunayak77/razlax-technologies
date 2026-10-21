@@ -381,7 +381,7 @@
             border-color: var(--text-main);
         }
 
-        /* Modern Flagship Phone Mockup (Ultra-Thin Bezel + Dynamic Island) */
+        /* Modern Titanium Phone Frame with Real screen.png */
         .hero-device {
             position: relative;
             display: flex;
@@ -402,17 +402,17 @@
 
         .phone-frame-modern {
             position: relative;
-            width: 290px;
-            height: 560px;
+            width: 285px;
+            height: 570px;
             background: #0f172a;
-            border: 3.5px solid #1e293b;
+            border: 4px solid #1e293b;
             border-radius: 46px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
             overflow: hidden;
             z-index: 2;
             display: flex;
             flex-direction: column;
-            padding: 5px;
+            padding: 4px;
         }
 
         .phone-inner-screen {
@@ -426,140 +426,47 @@
             position: relative;
         }
 
-        /* Dynamic Island Pill */
+        /* Dynamic Island */
         .phone-dynamic-island {
-            width: 82px;
-            height: 22px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 20px;
             background: #000000;
             border-radius: 20px;
-            margin: 10px auto 14px;
             display: flex;
             align-items: center;
             justify-content: flex-end;
             padding: 0 7px;
+            z-index: 10;
         }
 
         .island-camera-dot {
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             background: #111827;
             border: 1px solid #1f2937;
         }
 
-        .phone-ui-content {
-            padding: 0 16px 16px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        /* App Showcase Inside Phone */
-        .phone-app-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: #09090b;
-            color: #ffffff;
-            padding: 14px;
-            border-radius: 18px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
-        }
-
-        .phone-app-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            background: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Real Screenshot Fitted Inside Frame */
+        .phone-screen-content {
+            width: 100%;
+            height: 100%;
             overflow: hidden;
-            flex-shrink: 0;
-            font-size: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            background: #ffffff;
         }
 
-        .phone-app-icon img {
+        .real-app-screen {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        .phone-app-meta h4 {
-            font-size: 1.05rem;
-            font-weight: 800;
-            line-height: 1.2;
-            color: #ffffff;
-        }
-
-        .phone-app-meta p {
-            font-size: 0.72rem;
-            color: #a1a1aa;
-            font-weight: 600;
-            margin-top: 2px;
-        }
-
-        /* Streak & Coins Stats Widget */
-        .phone-stats-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
-
-        .phone-stat-box {
-            background: #f8fafc;
-            border: 1px solid var(--border-light);
-            border-radius: 14px;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .phone-stat-box .stat-val {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: #09090b;
-        }
-
-        .phone-stat-box .stat-lbl {
-            font-size: 0.68rem;
-            color: #71717a;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        /* Partner SDK Badges Inside Phone */
-        .phone-partner-widget {
-            background: #ffffff;
-            border: 1px solid var(--border-light);
-            border-radius: 16px;
-            padding: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-        }
-
-        .phone-partner-widget .widget-title {
-            font-size: 0.68rem;
-            font-weight: 800;
-            color: #71717a;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .phone-partner-logos {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            gap: 8px;
-            padding: 4px 0;
-        }
-
-        .phone-partner-logos img {
-            height: 22px;
-            width: auto;
-            max-width: 60px;
-            object-fit: contain;
-            filter: grayscale(15%);
+            object-position: top center;
+            display: block;
         }
 
         /* Floating Pill Badges */
@@ -597,7 +504,7 @@
             50% { transform: translateY(-7px); }
         }
 
-        /* AdTech & Monetization Partner Strip */
+        /* AdTech Partner Strip */
         .partners-strip {
             border-top: 1px solid var(--border-light);
             border-bottom: 1px solid var(--border-light);
@@ -629,7 +536,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
         }
 
@@ -653,7 +560,7 @@
         .partner-item img {
             height: 24px;
             width: auto;
-            max-width: 110px;
+            max-width: 100px;
             object-fit: contain;
             display: block;
         }
@@ -797,12 +704,12 @@
             border-radius: 8px;
         }
 
-        /* Sleek Pill Google Play Button */
+        /* App Actions Row: Google Play + Privacy + Terms */
         .app-actions {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             align-items: center;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
         }
 
         .btn-play-badge {
@@ -812,7 +719,7 @@
             background: #f1f3f6;
             border: 1px solid #d1d5db;
             border-radius: 9999px;
-            padding: 6px 18px;
+            padding: 6px 16px;
             text-decoration: none;
             transition: all 0.2s ease;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
@@ -826,8 +733,8 @@
         }
 
         .btn-play-badge img.play-icon-img {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             object-fit: contain;
             display: block;
             flex-shrink: 0;
@@ -849,21 +756,22 @@
         }
 
         .btn-play-badge .play-text-bottom {
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             font-weight: 800;
             color: #111827;
             letter-spacing: -0.3px;
         }
 
+        /* Privacy & Terms Pill Buttons */
         .btn-policy-link {
             background: #ffffff;
             border: 1px solid var(--border-light);
             color: var(--text-secondary);
-            padding: 0 16px;
+            padding: 0 14px;
             height: 44px;
             border-radius: 9999px;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 700;
             transition: all 0.2s ease;
             display: inline-flex;
@@ -877,7 +785,7 @@
             color: var(--text-main);
         }
 
-        /* Bento Grid (Original Logos from upload) */
+        /* Bento Architecture */
         .bento-section {
             border-top: 1px solid var(--border-light);
             background: var(--bg-surface);
@@ -1120,8 +1028,8 @@
                 margin: 0 auto;
             }
             .phone-frame-modern {
-                width: 260px;
-                height: 500px;
+                width: 255px;
+                height: 510px;
                 border-radius: 40px;
             }
             .pill-left {
@@ -1154,11 +1062,14 @@
                 border-radius: 20px;
             }
             .app-actions {
-                flex-wrap: wrap;
-                gap: 8px;
+                gap: 6px;
             }
             .btn-play-badge {
-                padding: 6px 14px;
+                padding: 6px 12px;
+            }
+            .btn-policy-link {
+                padding: 0 12px;
+                font-size: 0.78rem;
             }
         }
     </style>
@@ -1264,47 +1175,14 @@
                 <span>1,000+ Active Users</span>
             </div>
 
-            <!-- Sleek Flagship Phone Mockup -->
+            <!-- Sleek Phone Frame with Real screen.png -->
             <div class="phone-frame-modern">
                 <div class="phone-inner-screen">
-                    <!-- Dynamic Island Notch -->
                     <div class="phone-dynamic-island">
                         <div class="island-camera-dot"></div>
                     </div>
-
-                    <div class="phone-ui-content">
-                        <!-- App Header Widget -->
-                        <div class="phone-app-header">
-                            <div class="phone-app-icon">
-                                <img src="app-icon.png" alt="Pizza Rewards" onerror="this.parentElement.innerHTML='🍕'">
-                            </div>
-                            <div class="phone-app-meta">
-                                <h4>Pizza Rewards</h4>
-                                <p>S2S Verified • Android Native</p>
-                            </div>
-                        </div>
-
-                        <!-- Retention & Stats Counter -->
-                        <div class="phone-stats-row">
-                            <div class="phone-stat-box">
-                                <div class="stat-val">🔥 Day 7</div>
-                                <div class="stat-lbl">Active Streak</div>
-                            </div>
-                            <div class="phone-stat-box">
-                                <div class="stat-val">⭐ 4.8 / 5</div>
-                                <div class="stat-lbl">Play Rating</div>
-                            </div>
-                        </div>
-
-                        <!-- Monetization Stack Showcase -->
-                        <div class="phone-partner-widget">
-                            <div class="widget-title">Integrated Ad Stack</div>
-                            <div class="phone-partner-logos">
-                                <img src="admob.png" alt="AdMob" title="Google AdMob">
-                                <img src="meta.png" alt="Meta" title="Meta Audience Network">
-                                <img src="pubscale.png" alt="PubScale" title="PubScale Offerwall">
-                            </div>
-                        </div>
+                    <div class="phone-screen-content">
+                        <img src="screen.png" alt="Pizza Rewards Screen" class="real-app-screen">
                     </div>
                 </div>
             </div>
@@ -1316,7 +1194,7 @@
         </div>
     </section>
 
-    <!-- Monetization & AdTech Partners Strip -->
+    <!-- Monetization Partners Strip -->
     <section class="partners-strip" id="partners">
         <div class="partners-inner">
             <p class="label">Ad Monetization & Offerwall Partners</p>
@@ -1346,11 +1224,11 @@
         </div>
 
         <div class="apps-grid" id="appsGrid">
-            <!-- App Card dynamically populated -->
+            <!-- Dynamic app card rendered here -->
         </div>
     </section>
 
-    <!-- Studio Strengths (Using android.png, firebase.png, gamepad.png, shield.png) -->
+    <!-- Studio Strengths -->
     <section class="section-wrap bento-section" id="strengths">
         <div class="section-header">
             <span class="section-tag">Engineering</span>
@@ -1470,11 +1348,12 @@
                 description: "Interactive daily streak check-ins, scratch cards, and CPI offerwalls where users convert casual mobile engagement into verified reward points.",
                 features: ["Daily Streaks", "Offerwalls", "Instant Coin Sync", "Secure S2S"],
                 playStoreUrl: "https://play.google.com/store/apps/details?id=com.cricky.rewards",
-                policyUrl: "privacy-policy.html"
+                policyUrl: "privacy-policy.html",
+                termsUrl: "terms.html"
             }
         ];
 
-        // Slim Pill Google Play Button
+        // App Card Rendering with Google Play, Privacy, and Terms Buttons
         const gridContainer = document.getElementById('appsGrid');
         gridContainer.innerHTML = studioApps.map(app => `
             <div class="app-card">
@@ -1500,6 +1379,7 @@
                         </div>
                     </a>
                     <a href="${app.policyUrl}" class="btn-policy-link">Privacy</a>
+                    <a href="${app.termsUrl}" class="btn-policy-link">Terms</a>
                 </div>
             </div>
         `).join('');
