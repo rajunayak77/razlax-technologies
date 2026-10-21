@@ -6,14 +6,12 @@
     <title>Razlax Technologies | Android App Studio</title>
     <meta name="description" content="Razlax Technologies - Independent Android Studio engineering high-performance native apps, scalable cloud architectures, and gamified reward ecosystems.">
     
-    <!-- Open Graph / WhatsApp / Social Preview -->
+    <!-- Open Graph / WhatsApp Preview -->
     <meta property="og:title" content="Razlax Technologies | Android App Studio">
     <meta property="og:description" content="Engineering Scalable Mobile Experiences & Reward Systems.">
-    <meta property="og:image" content="https://razlaxtechnologies.in/banner.png">
+    <meta property="og:image" content="https://razlaxtechnologies.in/logo.png">
     <meta property="og:url" content="https://razlaxtechnologies.in">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://razlaxtechnologies.in/banner.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,11 +79,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.9rem 2rem;
+            padding: 1rem 2rem;
             max-width: 1250px;
             margin: 0 auto;
         }
 
+        /* Brand Logo: Clean logo.png + Text */
         .brand-logo {
             display: flex;
             align-items: center;
@@ -93,26 +92,26 @@
             text-decoration: none;
             color: var(--text-main);
             font-weight: 800;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             letter-spacing: -0.5px;
         }
 
         .brand-logo img {
+            width: 38px;
             height: 38px;
-            width: auto;
-            object-fit: contain;
-            border-radius: 8px;
+            border-radius: 10px;
+            object-fit: cover;
+            display: block;
         }
 
         .brand-logo-fallback {
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             border-radius: 10px;
             background: #000000;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
 
         .brand-logo-fallback svg {
@@ -154,7 +153,7 @@
             background: #27272a;
         }
 
-        /* Mobile Circular Hamburger Button */
+        /* Mobile Round Menu Button */
         .mobile-menu-btn {
             display: none;
             width: 44px;
@@ -172,14 +171,13 @@
 
         .mobile-menu-btn:hover {
             background: #f4f4f5;
-            border-color: #cbd5e1;
         }
 
         .burger-icon {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 4px;
+            gap: 4.5px;
             width: 18px;
         }
 
@@ -187,7 +185,6 @@
             height: 2.2px;
             background-color: #09090b;
             border-radius: 4px;
-            transition: all 0.3s ease;
         }
 
         .bar-1 { width: 18px; }
@@ -620,74 +617,48 @@
             border-radius: 8px;
         }
 
+        /* App Action Row (Using googleplay.png directly) */
         .app-actions {
             display: flex;
-            gap: 12px;
+            gap: 14px;
             align-items: center;
         }
 
-        /* Pill Google Play Button Badge (Image Style) */
-        .btn-google-play-pill {
-            flex: 1;
-            display: inline-flex;
-            align-items: center;
-            gap: 14px;
-            background: #f4f5f7;
-            border: 1.5px solid #d1d5db;
-            border-radius: 9999px;
-            padding: 8px 22px;
+        .btn-googleplay-img {
+            display: inline-block;
             text-decoration: none;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+            line-height: 0;
+        }
+
+        .btn-googleplay-img img {
+            height: 48px;
+            width: auto;
+            display: block;
+            border-radius: 9999px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
             transition: all 0.2s ease;
         }
 
-        .btn-google-play-pill:hover {
-            background: #ffffff;
-            border-color: #9ca3af;
+        .btn-googleplay-img:hover img {
             transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-        }
-
-        .play-logo-svg {
-            width: 28px;
-            height: 28px;
-            flex-shrink: 0;
-        }
-
-        .play-text-col {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-        }
-
-        .play-text-top {
-            font-size: 0.68rem;
-            font-weight: 700;
-            color: #4b5563;
-            letter-spacing: 0.5px;
-            line-height: 1;
-            margin-bottom: 2px;
-        }
-
-        .play-text-bottom {
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: #111827;
-            line-height: 1.1;
-            letter-spacing: -0.3px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
         }
 
         .btn-policy-link {
             background: #ffffff;
             border: 1px solid var(--border-light);
             color: var(--text-secondary);
-            padding: 0.85rem 1.2rem;
+            padding: 0.75rem 1.4rem;
             border-radius: 9999px;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 700;
             transition: all 0.2s ease;
+            height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-policy-link:hover {
@@ -950,6 +921,9 @@
                 <a href="https://www.instagram.com/razlaxtechnologies?vrfl=YnB3eHpocGJvaW40" target="_blank" class="social-btn" title="Instagram">
                     <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
+                <a href="https://linkedin.com/in/raju-nayak-razlax" target="_blank" class="social-btn" title="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.9 0-1.63.73-1.63 1.63 0 .9.73 1.63 1.63 1.63.9 0 1.63-.73 1.63-1.63 0-.9-.73-1.63-1.63-1.63Z"/></svg>
+                </a>
             </div>
         </div>
     </div>
@@ -957,8 +931,9 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="nav-inner">
+            <!-- Brand Logo: Clean logo.png + Text (No Tiny Banner) -->
             <a href="#" class="brand-logo">
-                <img src="banner.png" alt="Razlax Technologies" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';">
+                <img src="logo.png" alt="Razlax Logo" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';">
                 <div id="logoFallback" class="brand-logo-fallback" style="display: none;">
                     <svg viewBox="0 0 100 100">
                         <path d="M36 32 C36 32 56 30 58 38 C60 48 40 48 40 68 L40 82 L22 82 L22 18 L48 18 C65 18 78 28 78 44 C78 58 66 68 52 70 L72 82 L50 82 L36 68 Z"/>
@@ -976,7 +951,7 @@
                 <a href="mailto:support@razlaxtechnologies.in" class="btn-nav-contact">Contact Us</a>
             </div>
 
-            <!-- Mobile Round Menu Button (3 staggered bars) -->
+            <!-- Mobile Round Menu Button -->
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation">
                 <div class="burger-icon">
                     <span class="burger-bar bar-1"></span>
@@ -1049,7 +1024,7 @@
         </div>
 
         <div class="apps-grid" id="appsGrid">
-            <!-- Rendered dynamically by JavaScript -->
+            <!-- Dynamic app cards rendered here -->
         </div>
     </section>
 
@@ -1101,7 +1076,8 @@
         <div class="footer-inner">
             <div class="footer-brand">
                 <a href="#" class="brand-logo">
-                    <img src="banner.png" alt="Razlax Technologies" style="height: 38px; width: auto; object-fit: contain;">
+                    <img src="logo.png" alt="Razlax Logo" style="width: 38px; height: 38px; border-radius: 10px;">
+                    <span>Razlax Technologies</span>
                 </a>
                 <p>An independent mobile engineering studio crafting reliable, user-focused, and reward-driven Android applications.</p>
             </div>
@@ -1119,29 +1095,17 @@
             <div class="footer-col">
                 <h4>CONNECT WITH US</h4>
                 <div class="social-row">
-                    <!-- Telegram -->
-                    <a href="https://t.me/+NV6jDrS7DvBlYTA1" target="_blank" class="social-btn" title="Telegram Channel">
+                    <a href="https://t.me/+NV6jDrS7DvBlYTA1" target="_blank" class="social-btn" title="Telegram">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.61 3.72-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.06-.49-.83-.27-1.49-.42-1.43-.88.03-.24.37-.49 1.02-.75 4-1.74 6.68-2.88 8.03-3.44 3.82-1.59 4.62-1.87 5.14-1.88.11 0 .37.03.54.17.14.12.18.28.2.45-.01.07.01.21 0 .28z"/></svg>
                     </a>
-
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/share/1Chmbmawr7/" target="_blank" class="social-btn" title="Facebook Page">
+                    <a href="https://www.facebook.com/share/1Chmbmawr7/" target="_blank" class="social-btn" title="Facebook">
                         <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.19 22 12z"/></svg>
                     </a>
-
-                    <!-- Instagram -->
                     <a href="https://www.instagram.com/razlaxtechnologies?vrfl=YnB3eHpocGJvaW40" target="_blank" class="social-btn" title="Instagram">
                         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </a>
-
-                    <!-- LinkedIn -->
-                    <a href="https://linkedin.com/in/raju-nayak-razlax" target="_blank" class="social-btn" title="LinkedIn Profile">
+                    <a href="https://linkedin.com/in/raju-nayak-razlax" target="_blank" class="social-btn" title="LinkedIn">
                         <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.9 0-1.63.73-1.63 1.63 0 .9.73 1.63 1.63 1.63.9 0 1.63-.73 1.63-1.63 0-.9-.73-1.63-1.63-1.63Z"/></svg>
-                    </a>
-
-                    <!-- Email -->
-                    <a href="mailto:support@razlaxtechnologies.in" class="social-btn" title="Support Email">
-                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                     </a>
                 </div>
                 <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem;">support@razlaxtechnologies.in</p>
@@ -1158,9 +1122,8 @@
         </div>
     </footer>
 
-    <!-- Dynamic JavaScript App Data & Logic -->
+    <!-- JavaScript Data -->
     <script>
-        // Drawer Toggle Function
         function toggleMobileMenu() {
             const drawer = document.getElementById('mobileDrawer');
             const overlay = document.getElementById('drawerOverlay');
@@ -1168,7 +1131,6 @@
             overlay.classList.toggle('active');
         }
 
-        // Production Apps Array
         const studioApps = [
             {
                 title: "Cricky Rewards",
@@ -1181,7 +1143,7 @@
             }
         ];
 
-        // Dynamic Card Rendering with Image-style Google Play Pill Button
+        // Dynamic Card Rendering with direct googleplay.png button
         const gridContainer = document.getElementById('appsGrid');
         gridContainer.innerHTML = studioApps.map(app => `
             <div class="app-card">
@@ -1199,18 +1161,9 @@
                     </div>
                 </div>
                 <div class="app-actions">
-                    <!-- Custom Rounded Google Play Pill Badge Button -->
-                    <a href="${app.playStoreUrl}" target="_blank" class="btn-google-play-pill">
-                        <svg class="play-logo-svg" viewBox="0 0 48 48">
-                            <path fill="#4CAF50" d="M7.705 4.098C7.26 4.347 7 4.821 7 5.485v37.03c0 .664.26 1.138.705 1.387l.147.082 20.737-20.738v-.492L7.852 4.016l-.147.082z"/>
-                            <path fill="#FF9800" d="M35.48 27.608l-6.891-6.892v-.492l6.892-6.892.158.09 8.163 4.638c2.331 1.325 2.331 3.491 0 4.816l-8.163 4.641-.159.091z"/>
-                            <path fill="#F44336" d="M28.589 20.716L7.705 4.098c.44-.249 1.05-.137 1.688.225l19.196 10.903v5.49z"/>
-                            <path fill="#2196F3" d="M28.589 27.284v5.49L9.393 43.677c-.638.362-1.248.474-1.688.225l20.884-16.618z"/>
-                        </svg>
-                        <div class="play-text-col">
-                            <span class="play-text-top">Get It On</span>
-                            <span class="play-text-bottom">Google Play</span>
-                        </div>
+                    <!-- Direct googleplay.png image link -->
+                    <a href="${app.playStoreUrl}" target="_blank" class="btn-googleplay-img">
+                        <img src="googleplay.png" alt="Get it on Google Play">
                     </a>
                     <a href="${app.policyUrl}" class="btn-policy-link">Privacy</a>
                 </div>
