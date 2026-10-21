@@ -617,45 +617,76 @@
             border-radius: 8px;
         }
 
-        /* App Action Row (Using googleplay.png directly) */
+        /* EXACT GOOGLE PLAY BADGE BUTTON (MATCHING SCREENSHOT) */
         .app-actions {
             display: flex;
-            gap: 14px;
+            gap: 12px;
             align-items: center;
         }
 
-        .btn-googleplay-img {
-            display: inline-block;
+        .btn-play-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            background: #eef0f4;
+            border: 1.5px solid #d5d9e0;
+            border-radius: 20px;
+            padding: 9px 24px;
             text-decoration: none;
             transition: all 0.2s ease;
-            line-height: 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            flex-grow: 0;
         }
 
-        .btn-googleplay-img img {
-            height: 48px;
-            width: auto;
-            display: block;
-            border-radius: 9999px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
-            transition: all 0.2s ease;
-        }
-
-        .btn-googleplay-img:hover img {
+        .btn-play-badge:hover {
+            background: #e2e5ea;
+            border-color: #bcc1ca;
             transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-play-badge img.play-icon-img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            display: block;
+            flex-shrink: 0;
+        }
+
+        .btn-play-badge .play-text-col {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            line-height: 1.15;
+        }
+
+        .btn-play-badge .play-text-top {
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: #1f2937;
+            letter-spacing: -0.1px;
+            margin-bottom: 2px;
+        }
+
+        .btn-play-badge .play-text-bottom {
+            font-size: 1.22rem;
+            font-weight: 800;
+            color: #0b0f19;
+            letter-spacing: -0.5px;
         }
 
         .btn-policy-link {
             background: #ffffff;
             border: 1px solid var(--border-light);
             color: var(--text-secondary);
-            padding: 0.75rem 1.4rem;
-            border-radius: 9999px;
+            padding: 0 1.3rem;
+            height: 52px;
+            border-radius: 20px;
             text-decoration: none;
-            font-size: 0.88rem;
+            font-size: 0.9rem;
             font-weight: 700;
             transition: all 0.2s ease;
-            height: 48px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -931,7 +962,6 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="nav-inner">
-            <!-- Brand Logo: Clean logo.png + Text (No Tiny Banner) -->
             <a href="#" class="brand-logo">
                 <img src="logo.png" alt="Razlax Logo" onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';">
                 <div id="logoFallback" class="brand-logo-fallback" style="display: none;">
@@ -983,7 +1013,6 @@
         <div class="hero-device">
             <div class="device-glow"></div>
 
-            <!-- Real Active Users Counter -->
             <div class="floating-pill pill-left">
                 <span>↗</span>
                 <span>1,000+ Active Users</span>
@@ -1024,7 +1053,7 @@
         </div>
 
         <div class="apps-grid" id="appsGrid">
-            <!-- Dynamic app cards rendered here -->
+            <!-- App Card dynamically populated -->
         </div>
     </section>
 
@@ -1122,7 +1151,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript Data -->
+    <!-- Dynamic JavaScript App Data & Logic -->
     <script>
         function toggleMobileMenu() {
             const drawer = document.getElementById('mobileDrawer');
@@ -1143,7 +1172,7 @@
             }
         ];
 
-        // Dynamic Card Rendering with direct googleplay.png button
+        // Card Render: EXACT Get It On Google Play Button with googleplay.png Icon
         const gridContainer = document.getElementById('appsGrid');
         gridContainer.innerHTML = studioApps.map(app => `
             <div class="app-card">
@@ -1161,9 +1190,13 @@
                     </div>
                 </div>
                 <div class="app-actions">
-                    <!-- Direct googleplay.png image link -->
-                    <a href="${app.playStoreUrl}" target="_blank" class="btn-googleplay-img">
-                        <img src="googleplay.png" alt="Get it on Google Play">
+                    <!-- Complete Pill Button with googleplay.png + Text -->
+                    <a href="${app.playStoreUrl}" target="_blank" class="btn-play-badge">
+                        <img src="googleplay.png" alt="Google Play" class="play-icon-img">
+                        <div class="play-text-col">
+                            <span class="play-text-top">Get It On</span>
+                            <span class="play-text-bottom">Google Play</span>
+                        </div>
                     </a>
                     <a href="${app.policyUrl}" class="btn-policy-link">Privacy</a>
                 </div>
