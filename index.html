@@ -381,7 +381,7 @@
             border-color: var(--text-main);
         }
 
-        /* Modern Titanium Phone Frame with Real screen.png */
+        /* Modern Titanium Phone Frame Fitted Perfectly to screen.png */
         .hero-device {
             position: relative;
             display: flex;
@@ -400,64 +400,35 @@
             z-index: 1;
         }
 
+        /* Scaled ratio matching modern 20:9 screens */
         .phone-frame-modern {
             position: relative;
-            width: 285px;
-            height: 570px;
+            width: 275px;
+            height: 580px;
             background: #0f172a;
-            border: 4px solid #1e293b;
-            border-radius: 46px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            border: 3.5px solid #1e293b;
+            border-radius: 42px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
             overflow: hidden;
             z-index: 2;
             display: flex;
             flex-direction: column;
-            padding: 4px;
+            padding: 3px;
         }
 
         .phone-inner-screen {
             background: #ffffff;
-            border-radius: 40px;
+            border-radius: 38px;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
             position: relative;
         }
 
-        /* Dynamic Island */
-        .phone-dynamic-island {
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 20px;
-            background: #000000;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding: 0 7px;
-            z-index: 10;
-        }
-
-        .island-camera-dot {
-            width: 7px;
-            height: 7px;
-            border-radius: 50%;
-            background: #111827;
-            border: 1px solid #1f2937;
-        }
-
-        /* Real Screenshot Fitted Inside Frame */
         .phone-screen-content {
             width: 100%;
             height: 100%;
             overflow: hidden;
-            display: flex;
-            align-items: flex-start;
             background: #ffffff;
         }
 
@@ -785,7 +756,7 @@
             color: var(--text-main);
         }
 
-        /* Bento Architecture */
+        /* Bento Architecture (Using android.png, firebase.png, gamepad.png, shield.png) */
         .bento-section {
             border-top: 1px solid var(--border-light);
             background: var(--bg-surface);
@@ -1028,9 +999,12 @@
                 margin: 0 auto;
             }
             .phone-frame-modern {
-                width: 255px;
-                height: 510px;
-                border-radius: 40px;
+                width: 250px;
+                height: 525px;
+                border-radius: 38px;
+            }
+            .phone-inner-screen {
+                border-radius: 34px;
             }
             .pill-left {
                 left: -5px;
@@ -1175,12 +1149,9 @@
                 <span>1,000+ Active Users</span>
             </div>
 
-            <!-- Sleek Phone Frame with Real screen.png -->
+            <!-- Modern Phone Frame with Real screen.png (Fitted Aspect Ratio & No Duplicate Notch) -->
             <div class="phone-frame-modern">
                 <div class="phone-inner-screen">
-                    <div class="phone-dynamic-island">
-                        <div class="island-camera-dot"></div>
-                    </div>
                     <div class="phone-screen-content">
                         <img src="screen.png" alt="Pizza Rewards Screen" class="real-app-screen">
                     </div>
@@ -1224,7 +1195,7 @@
         </div>
 
         <div class="apps-grid" id="appsGrid">
-            <!-- Dynamic app card rendered here -->
+            <!-- Rendered dynamically by JavaScript -->
         </div>
     </section>
 
