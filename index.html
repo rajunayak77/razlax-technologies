@@ -381,7 +381,7 @@
             border-color: var(--text-main);
         }
 
-        /* Modern Titanium Phone Frame Fitted Perfectly to screen.png */
+        /* Modern Titanium Phone Frame (Size unchanged, scale managed) */
         .hero-device {
             position: relative;
             display: flex;
@@ -400,7 +400,6 @@
             z-index: 1;
         }
 
-        /* Scaled ratio matching modern 20:9 screens */
         .phone-frame-modern {
             position: relative;
             width: 275px;
@@ -432,11 +431,10 @@
             background: #ffffff;
         }
 
+        /* Natural Scale: Width 100% & Height Auto (No Zoom/Cutoff) */
         .real-app-screen {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top center;
+            height: auto;
             display: block;
         }
 
@@ -675,7 +673,7 @@
             border-radius: 8px;
         }
 
-        /* App Actions Row: Google Play + Privacy + Terms */
+        /* App Actions Row */
         .app-actions {
             display: flex;
             gap: 8px;
@@ -733,7 +731,6 @@
             letter-spacing: -0.3px;
         }
 
-        /* Privacy & Terms Pill Buttons */
         .btn-policy-link {
             background: #ffffff;
             border: 1px solid var(--border-light);
@@ -756,7 +753,7 @@
             color: var(--text-main);
         }
 
-        /* Bento Architecture (Using android.png, firebase.png, gamepad.png, shield.png) */
+        /* Bento Architecture */
         .bento-section {
             border-top: 1px solid var(--border-light);
             background: var(--bg-surface);
@@ -1149,7 +1146,7 @@
                 <span>1,000+ Active Users</span>
             </div>
 
-            <!-- Modern Phone Frame with Real screen.png (Fitted Aspect Ratio & No Duplicate Notch) -->
+            <!-- Phone Frame -->
             <div class="phone-frame-modern">
                 <div class="phone-inner-screen">
                     <div class="phone-screen-content">
