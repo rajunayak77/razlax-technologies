@@ -3,3 +3,7 @@ google.com, pub-1923548844543961, DIRECT, f08c47fec0942fa0
 
 # Meta Audience Network
 facebook.com, 2136694943569199, RESELLER, c373570f35d549bc
+
+# GameAdZone (Google AdX)
+google.com, pub-2960293519697422, DIRECT, f08c47fec0942fa0
+gameadzone.com, 2457, DIRECT
